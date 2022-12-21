@@ -4,7 +4,7 @@ import (
 	"errors"
 	"github.com/berndonline/go-rest-dynamodb/pkg/handlers"
 	"github.com/berndonline/go-rest-dynamodb/pkg/repository/adapter"
-	HttpStatus "github.com/berndonline/go-rest-dynamodb/pkg/utils/http"
+	HttpStatus "github.com/berndonline/go-rest-dynamodb/pkg/http"
 	"net/http"
 )
 

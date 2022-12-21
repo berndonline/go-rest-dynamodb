@@ -10,7 +10,7 @@ import (
 	"github.com/berndonline/go-rest-dynamodb/pkg/repository/adapter"
 	Rules "github.com/berndonline/go-rest-dynamodb/pkg/rules"
 	RulesProduct "github.com/berndonline/go-rest-dynamodb/pkg/rules/product"
-	HttpStatus "github.com/berndonline/go-rest-dynamodb/pkg/utils/http"
+	HttpStatus "github.com/berndonline/go-rest-dynamodb/pkg/http"
 	"net/http"
 	"time"
 )
