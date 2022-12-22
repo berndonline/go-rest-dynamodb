@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-	configs := confi/g.GetConfig()
+	configs := config.GetConfig()
 
 	connection := instance.GetConnection()
 	repository := adapter.NewAdapter(connection)
