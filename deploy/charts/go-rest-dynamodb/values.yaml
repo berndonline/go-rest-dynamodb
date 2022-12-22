@@ -25,11 +25,7 @@ serviceAccount:
 
 podAnnotations: {}
 
-podEnv:
-  - name: AWS_ACCESS_KEY_ID
-    value: "myaccesskey"
-  - name: AWS_SECRET_ACCESS_KEY
-    value: "mysecretaccesskey"
+podEnv: []
 
 podSecurityContext: {}
   # fsGroup: 2000
