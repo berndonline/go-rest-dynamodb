@@ -5,11 +5,8 @@ FROM golang:1.18 as builder
 WORKDIR /app
 
 # Retrieve application dependencies using go modules.
-COPY go.* ./...
+COPY . .
 RUN go mod download
-
-# Copy local code to the container image.
-COPY . ./
 
 # Build the binary.
 # -mod=readonly ensures immutable go.mod and go.sum in container builds.
