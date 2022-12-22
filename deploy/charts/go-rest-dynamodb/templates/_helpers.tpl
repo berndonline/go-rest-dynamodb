@@ -49,3 +49,14 @@ Selector labels
 app.kubernetes.io/name: {{ include "go-rest-dynamodb.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
+
+{{/*
+Create the name of the service account to use
+*/}}
+{{- define "go-rest-dynamodb.serviceAccountName" -}}
+{{- if .Values.serviceAccount.create }}
+{{- default (include "go-rest-dynamodb.fullname" .) .Values.serviceAccount.name }}
+{{- else }}
+{{- default "default" .Values.serviceAccount.name }}
+{{- end }}
+{{- end }}
