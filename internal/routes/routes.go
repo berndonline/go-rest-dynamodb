@@ -3,10 +3,10 @@ package routes
 import (
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
-	ServerConfig "github.com/berndonline/go-rest-dynamodb/pkg/config"
-	HealthHandler "github.com/berndonline/go-rest-dynamodb/pkg/handlers/health"
-	ProductHandler "github.com/berndonline/go-rest-dynamodb/pkg/handlers/product"
-	"github.com/berndonline/go-rest-dynamodb/pkg/repository/adapter"
+	ServerConfig "github.com/berndonline/go-rest-dynamodb/config"
+	HealthHandler "github.com/berndonline/go-rest-dynamodb/internal/handlers/health"
+	ProductHandler "github.com/berndonline/go-rest-dynamodb/internal/handlers/product"
+	"github.com/berndonline/go-rest-dynamodb/internal/repository/adapter"
 )
 
 type Router struct {

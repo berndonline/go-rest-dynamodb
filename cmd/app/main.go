@@ -3,19 +3,19 @@ package main
 import (
 	"fmt"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"github.com/berndonline/go-rest-dynamodb/pkg/config"
-	"github.com/berndonline/go-rest-dynamodb/pkg/repository/adapter"
-	"github.com/berndonline/go-rest-dynamodb/pkg/repository/instance"
-	"github.com/berndonline/go-rest-dynamodb/pkg/routes"
-	"github.com/berndonline/go-rest-dynamodb/pkg/rules"
-	RulesProduct "github.com/berndonline/go-rest-dynamodb/pkg/rules/product"
-	"github.com/berndonline/go-rest-dynamodb/pkg/logger"
+	"github.com/berndonline/go-rest-dynamodb/config"
+	"github.com/berndonline/go-rest-dynamodb/internal/repository/adapter"
+	"github.com/berndonline/go-rest-dynamodb/internal/repository/instance"
+	"github.com/berndonline/go-rest-dynamodb/internal/routes"
+	"github.com/berndonline/go-rest-dynamodb/internal/rules"
+	RulesProduct "github.com/berndonline/go-rest-dynamodb/internal/rules/product"
+	"github.com/berndonline/go-rest-dynamodb/utils/logger"
 	"log"
 	"net/http"
 )
 
 func main() {
-	configs := config.GetConfig()
+	configs := confi/g.GetConfig()
 
 	connection := instance.GetConnection()
 	repository := adapter.NewAdapter(connection)

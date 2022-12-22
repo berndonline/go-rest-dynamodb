@@ -3,8 +3,8 @@ package product
 import (
 	"github.com/aws/aws-sdk-go/service/dynamodb/expression"
 	"github.com/google/uuid"
-	"github.com/berndonline/go-rest-dynamodb/pkg/entities/product"
-	"github.com/berndonline/go-rest-dynamodb/pkg/repository/adapter"
+	"github.com/berndonline/go-rest-dynamodb/internal/entities/product"
+	"github.com/berndonline/go-rest-dynamodb/internal/repository/adapter"
 	"time"
 )
 

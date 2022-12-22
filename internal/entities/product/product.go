@@ -5,7 +5,7 @@ import (
 	"errors"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/google/uuid"
-	"github.com/berndonline/go-rest-dynamodb/pkg/entities"
+	"github.com/berndonline/go-rest-dynamodb/internal/entities"
 	"time"
 )
 

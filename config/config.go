@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/berndonline/go-rest-dynamodb/pkg/env"
+	"github.com/berndonline/go-rest-dynamodb/utils/env"
 	"strconv"
 )
 

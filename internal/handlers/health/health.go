@@ -2,9 +2,9 @@ package health
 
 import (
 	"errors"
-	"github.com/berndonline/go-rest-dynamodb/pkg/handlers"
-	"github.com/berndonline/go-rest-dynamodb/pkg/repository/adapter"
-	HttpStatus "github.com/berndonline/go-rest-dynamodb/pkg/http"
+	"github.com/berndonline/go-rest-dynamodb/internal/handlers"
+	"github.com/berndonline/go-rest-dynamodb/internal/repository/adapter"
+	HttpStatus "github.com/berndonline/go-rest-dynamodb/utils/http"
 	"net/http"
 )
 
