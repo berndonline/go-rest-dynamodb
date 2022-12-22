@@ -1,6 +1,8 @@
 # Use goland build image
 FROM golang:1.18 as builder
 
+RUN mkdir -p /app/
+
 # Create and change to the app directory.
 WORKDIR /app
 
@@ -9,6 +11,7 @@ COPY . .
 RUN go mod download
 
 # Build the binary.
+COPY cmd/app .
 # -mod=readonly ensures immutable go.mod and go.sum in container builds.
 RUN CGO_ENABLED=0 GOOS=linux go build -mod=readonly -v -o server
 
