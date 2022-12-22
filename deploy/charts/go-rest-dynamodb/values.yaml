@@ -26,12 +26,10 @@ serviceAccount:
 podAnnotations: {}
 
 podEnv:
-  - name: RESPONSE
-    value: "Hello, World - REST API!"
-  - name: PORT
-    value: "8080"
-  - name: METRICSPORT
-    value: "9100"
+  - name: AWS_ACCESS_KEY_ID
+    value: "myaccesskey"
+  - name: AWS_SECRET_ACCESS_KEY
+    value: "mysecretaccesskey"
 
 podSecurityContext: {}
   # fsGroup: 2000
