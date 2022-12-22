@@ -17,6 +17,10 @@ podLabels:
 podEnv:
   - name: PORT
     value: "8080"
+  - name: AWS_ACCESS_KEY_ID
+    value: "myaccesskey"
+  - name: AWS_SECRET_ACCESS_KEY
+    value: "mysecretaccesskey"
 
 service:
   type: ClusterIP
