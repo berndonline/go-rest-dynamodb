@@ -25,6 +25,9 @@ serviceAccount:
 
 podAnnotations: {}
 
+podLabels:
+  loki.logging.vector.dev/forwarding: enabled
+
 podEnv: []
 
 podSecurityContext: {}
