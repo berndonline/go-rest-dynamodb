@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: k8s/go-rest-dynamodb
+  IMAGE_NAME: berndonline/k8s/go-rest-dynamodb
 
 jobs:
   build-and-push-image:
