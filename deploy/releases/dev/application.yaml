@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/go-rest-dynamodb.update-strategy: digest
     argocd-image-updater.argoproj.io/image-list: go-rest-dynamodb=ghcr.io/berndonline/k8s/go-rest-dynamodb:main
-  name: dev
+  name: app-dev
   namespace: argocd
 spec:
   destination:
@@ -17,6 +17,6 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - “values.$ARGOCD_APP_NAMESPACE.yaml”
+        - values.$ARGOCD_APP_NAMESPACE.yaml
   syncPolicy:
     automated: {}

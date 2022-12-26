@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prod
+  name: app-prod
   namespace: argocd
 spec:
   destination:
@@ -14,6 +14,6 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - “values.$ARGOCD_APP_NAMESPACE.yaml”
+        - values.$ARGOCD_APP_NAMESPACE.yaml
   syncPolicy:
     automated: {}
