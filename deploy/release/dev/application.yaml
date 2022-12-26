@@ -1,6 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  annotations:
+    argocd-image-updater.argoproj.io/go-rest-dynamodb.update-strategy: digest
+    argocd-image-updater.argoproj.io/image-list: go-rest-dynamodb=ghcr.io/berndonline/k8s/go-rest-dynamodb:main
   name: api
   namespace: argocd
 spec:
