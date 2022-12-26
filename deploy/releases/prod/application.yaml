@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prod
+  namespace: argocd
+spec:
+  destination:
+    namespace: prod
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: deploy/charts/go-rest-dynamodb
+    repoURL: https://github.com/berndonline/go-rest-dynamodb.git
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - “values.$ARGOCD_APP_NAMESPACE.yaml”
+  syncPolicy:
+    automated: {}

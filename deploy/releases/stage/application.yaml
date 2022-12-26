@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  annotations:
-    argocd-image-updater.argoproj.io/go-rest-dynamodb.update-strategy: digest
-    argocd-image-updater.argoproj.io/image-list: go-rest-dynamodb=ghcr.io/berndonline/k8s/go-rest-dynamodb:main
-  name: api
+  name: stage
   namespace: argocd
 spec:
   destination:
-    namespace: app
+    namespace: stage
     server: https://kubernetes.default.svc
   project: default
   source:
     path: deploy/charts/go-rest-dynamodb
     repoURL: https://github.com/berndonline/go-rest-dynamodb.git
     targetRevision: HEAD
+    helm:
+      valueFiles:
+        - “values.$ARGOCD_APP_NAMESPACE.yaml”
   syncPolicy:
     automated: {}
