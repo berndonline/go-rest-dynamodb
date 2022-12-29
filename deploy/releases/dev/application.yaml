@@ -4,11 +4,11 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/go-rest-dynamodb.update-strategy: digest
     argocd-image-updater.argoproj.io/image-list: go-rest-dynamodb=ghcr.io/berndonline/k8s/go-rest-dynamodb:main
-  name: app-dev
+  name: product-dev
   namespace: argocd
 spec:
   destination:
-    namespace: dev
+    namespace: product-dev
     server: https://kubernetes.default.svc
   project: default
   source:
